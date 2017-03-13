@@ -1,8 +1,8 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 
-gulp.task('hello', function() {
-  console.log('Hello Zell');
+gulp.task('test', function() {
+  console.log('Hello Gulp is Working proeprly for you Tom :)');
 });
 
 gulp.task('sass', function(){
