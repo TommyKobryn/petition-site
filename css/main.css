@@ -182,3 +182,7 @@ p, a {
   font-weight: bold;
   width: 250px;
   height: 55px; }
+
+.row-contentt {
+  padding-left: 30px;
+  padding-right: 30px; }

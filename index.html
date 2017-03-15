@@ -14,55 +14,13 @@
 
 </head>
 <body>
-<div class="mainheader">
+	<!-- ....................................... Loading Header with JQuery ............... -->
+
+<div id="headerLoad">
+	</div>
 
 
-	<nav class="navbar  ">
-	  <div class="container-fluid">
-			<div class="container">
-
-	    <!-- Brand and toggle get grouped for better mobile display -->
-	    <div class="navbar-header">
-	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-	        <span class="sr-only">Toggle navigation</span>
-	        <span class="icon-bar"></span>
-	        <span class="icon-bar"></span>
-	        <span class="icon-bar"></span>
-	      </button>
-	  <a href="index.html"> <img class="navbar-brand"  id="logo" src="images/logo.png"/> </a>
-	    </div>
-
-	    <!-- Collect the nav links, forms, and other content for toggling -->
-	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-	      <ul id="menuElements" class="nav navbar-nav navbar-right">
-	        <li><a href="#"><i class="fa fa-user-plus" aria-hidden="true"></i> Register</a></li>
-	        <li><a href="#"><i class="fa fa-caret-square-o-right" aria-hidden="true"></i> Login</a></li>
-	      </ul>
-	    </div><!-- /.navbar-collapse -->
-
-		</div>
-	  </div><!-- /.container-fluid -->
-	</nav>
-<div class="main-title col-sm-12 text-center">
-	<h1>	Create Your Free Petition <br />
-				In 3 Easy Steps</h1>
-</div>
-
-<div class=" headr-steps col-sm-12"  >
-<div class="container">
-
-
-<h2 class="col-sm-4"><i class="fa fa-check-square-o" aria-hidden="true"></i> Enter Petition Detials</h2>
-<h2 class="col-sm-4"><i class="fa fa-check-square-o" aria-hidden="true"></i> Enter Your Infomration</h2>
-<h2 class="col-sm-4"><i class="fa fa-check-square-o" aria-hidden="true"></i> Collect Signatures</h2>
-</div>
-</div>
-
-
-<div class="header-buttonn col-sm-12 text-center">
-<p> <button id="header-button" type="button" class="btn btn-success btn-lg">Start The New Petition Now <i class="fa fa-share" aria-hidden="true"></i></button>  </p>
-</div>
-</div>
+<!-- ....................................... Homepage content ............... -->
 
 <div class=" row-content">
 	<div class="container">
@@ -92,134 +50,54 @@
 	</ul>
 </div>
 
-<div class="tabs-content-wrapper">
-            <div class="container">
-                    <div class="petitions-list col-sm-12">
-                                    <div id="listElement" class="petition-item clearfix">
-                <div class="img-wrapper col-sm-4">
-                    <a href="#">
-                        <img src="images/politics.jpg" alt="Save Hillview Street Dogs"/>
-                    </a>
-                </div>
-                <div class="petition-item-content col-sm-8">
-                    <a href="#" class="title-tab">Lorem ipsum dolor consectetur elit <span class="counter">(2)</span></a>
-                    <div class="description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</div>
+<!-- ....................................... Template  for petitions ............... -->
 
-										<div class="button-vote text-right">
-											<button type="button" class="btn btn-danger">Submit Your Signature Now!</button>
-										</div>
-                                    </div>
+<div id="petitions">
+	</div>
 
-            </div>
+
+	<!-- ....................................... Loading Header with JQuery ............... -->
+
+<div id="footerLoad">
+	</div>
+
+
+
+<!-- ........................................ Building Template with Mustache ................. -->
+
+<script id="petitionTemplate" type="text/template">
+{{#petitions}}
+	<div class="tabs-content-wrapper">
+	            <div class="container">
+	                    <div class="petitions-list col-sm-12">
+	                                    <div id="listElement" class="petition-item clearfix">
+	                <div class="img-wrapper col-sm-4">
+	                    <a href="#">
+	                        <img src="images/{{image}}.jpg" alt="Save Hillview Street Dogs"/>
+	                    </a>
+	                </div>
+	                <div class="petition-item-content col-sm-8">
+	                    <a href="#" id="petitionTitle" class="title-tab">{{title}}<span class="counter"> ({{counter}})</span></a>
+	                    <div id="petitiondescription" class="description"></div>
+												{{description}}
+											<div class="button-vote text-right">
+												<button type="button" class="btn btn-danger">Submit Your Signature Now!</button>
+											</div>
+	                                    </div>
+
+	            </div>
+						</div>
 					</div>
 				</div>
-			</div>
-			<!-- ....................................... Second voting ............... -->
-			<div class="tabs-content-wrapper">
-			            <div class="container">
-			                    <div class="petitions-list col-sm-12">
-			                                    <div id="listElement" class="petition-item clearfix">
-			                <div class="img-wrapper col-sm-4">
-			                    <a href="#">
-			                        <img src="images/taxfree.jpg" alt="Save Hillview Street Dogs"/>
-			                    </a>
-			                </div>
-			                <div class="petition-item-content col-sm-8">
-			                    <a href="#" class="title-tab">Lorem ipsum consectetur adipiscing elit <span class="counter">(35)</span></a>
-			                    <div class="description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</div>
-
-													<div class="button-vote text-right">
-														<button type="button" class="btn btn-danger">Submit Your Signature Now!</button>
-													</div>
-			                                    </div>
-
-			            </div>
-								</div>
-							</div>
-						</div>
-						<!-- ....................................... 3 voting ............... -->
-
-						<div class="tabs-content-wrapper">
-						            <div class="container">
-						                    <div class="petitions-list col-sm-12">
-						                                    <div id="listElement" class="petition-item clearfix">
-						                <div class="img-wrapper col-sm-4">
-						                    <a href="#">
-						                        <img  src="images/environment.jpg" alt="Save Hillview Street Dogs"/>
-						                    </a>
-						                </div>
-						                <div class="petition-item-content col-sm-8">
-						                    <a href="#" class="title-tab">Lorem dolor consectetur adipiscing elit <span class="counter">(9)</span></a>
-						                    <div class="description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</div>
-
-																<div class="button-vote text-right">
-																	<button type="button" class="btn btn-danger">Submit Your Signature Now!</button>
-																</div>
-						                                    </div>
-
-						            </div>
-											</div>
-										</div>
-									</div>
-									<!-- ....................................... 4 voting ............... -->
-									<div class="tabs-content-wrapper">
-															<div class="container">
-																			<div class="petitions-list col-sm-12">
-																											<div id="listElement" class="petition-item clearfix">
-																	<div class="img-wrapper col-sm-4">
-																			<a href="#">
-																					<img  src="images/racism.jpg" alt="Save Hillview Street Dogs"/>
-																			</a>
-																	</div>
-																	<div class="petition-item-content col-sm-8">
-																			<a href="#" class="title-tab">Lorem dolor consectetur adipiscing elit <span class="counter">(543)</span></a>
-																			<div class="description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</div>
-
-																			<div class="button-vote text-right">
-																				<button type="button" class="btn btn-danger">Submit Your Signature Now!</button>
-																			</div>
-																											</div>
-
-															</div>
-														</div>
-													</div>
-												</div>
-
-
-												<!-- Footer -->
-
-													<footer class="footer-basic-centered">
-
-																<p class="footer-company-motto"><i>Create Your Free Petition
-												In 3 Easy Steps</i></p>
-
-																<p class="footer-links">
-																	<a href="#">Home</a>
-																	·
-																	<a href="#">Blog</a>
-																	·
-																	<a href="#">About</a>
-																	·
-																	<a href="#">FAQ</a>
-																	·
-																	<a href="#">Contact</a>
-																</p>
-
-																<p class="footer-company-name">FreeVote &copy; 2017</p>
-
-															</footer>
-
-
-
+				{{/petitions}}
+</script>
 
 <!-- ................................... Loading scripts ..................... -->
-<script src="js/main.js"></script>
+
 <script src="/bower_components/jquery/dist/jquery.min.js"></script>
 <script src="bower_components/jquery-ui/jquery-ui.min.js"></script>
 <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-
+<script src="bower_components/mustache.js/mustache.min.js"></script>
+<script src="js/main.js"></script>
 
 </body>
-
-
-</html>
