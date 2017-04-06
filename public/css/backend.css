@@ -1,0 +1,27 @@
+.container-social {
+  margin-top: 50px;
+  padding-left: 150px;
+  padding-right: 50px;
+}
+.pluginButton {
+height: 120%;
+width: 120%;
+}
+.petitionstitle {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+  color: #355061;
+}
+
+.social-buttons {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  position: relative;
+}
+#fbid {
+
+  top: -10px;
+  margin-right: 5px;
+}
